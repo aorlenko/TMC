@@ -3,6 +3,8 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 using DatabaseContext.Contracts;
 using DatabaseContext;
+using Service.Contracts;
+using Service;
 
 namespace BaseTestApp.App_Start
 {
@@ -39,6 +41,7 @@ namespace BaseTestApp.App_Start
 
             // TODO: Register your types here
             container.RegisterType<IOrdersRepository, OrdersRepository>();
+            container.RegisterType<IOrderService, OrderService>();
         }
     }
 }

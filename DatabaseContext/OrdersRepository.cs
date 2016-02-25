@@ -14,7 +14,7 @@ namespace DatabaseContext
         {
             using (var db = new OrdersContext())
             {
-                return db.Set<Order>().ToList();
+                return db.Orders.ToList();
             }
         }
     }

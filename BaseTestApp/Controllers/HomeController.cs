@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BaseTestApp.Models;
+using Service.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,17 @@ namespace BaseTestApp.Controllers
 {
     public class HomeController : Controller
     {
+        private IOrderService _orderService;
+
+        public HomeController(IOrderService orderService)
+        {
+            _orderService = orderService;
+        }
         public ActionResult Index()
         {
-            return View();
+            var orders = _orderService.GetAllOrders();
+            var model = orders.Select(order => new OrderViewModel { Code = order.Code });
+            return View(model);
         }
 
         public ActionResult About()

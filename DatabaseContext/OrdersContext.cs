@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomainModel;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,5 +10,13 @@ namespace DatabaseContext
 {
     public class OrdersContext : DbContext
     {
+        public DbSet<Order> Orders { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //Configure domain classes using modelBuilder here
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

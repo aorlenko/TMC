@@ -8,8 +8,13 @@ namespace DomainModel
 {
     public class Order
     {
-        public int Id { get; set; }
-        public string Code { get; set; }
+        public Order(string code)
+        {
+            Code = code;
+        }
+
+        public int Id { get; private set; }
+        public string Code { get; private set; }
         public ICollection<OrderLine> OrderLines { get; set; }
     }
 }
