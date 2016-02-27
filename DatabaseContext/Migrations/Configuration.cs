@@ -1,6 +1,8 @@
 namespace DatabaseContext.Migrations
 {
+    using DomainModel;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -15,18 +17,12 @@ namespace DatabaseContext.Migrations
 
         protected override void Seed(DatabaseContext.OrdersContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            var defaultStandards = new List<Order>();
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            defaultStandards.Add(new Order("ABCDE"));
+
+            foreach (var order in defaultStandards)
+                context.Orders.AddOrUpdate(order);
         }
     }
 }

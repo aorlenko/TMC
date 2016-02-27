@@ -12,10 +12,15 @@ namespace DatabaseContext
     {
         public DbSet<Order> Orders { get; set; }
 
+        public OrdersContext()
+        {
+            Database.SetInitializer<OrdersContext>(new DbInitializer());
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Configure domain classes using modelBuilder here
-
+            modelBuilder.Configurations.Add(new OrderEntityConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -8,6 +8,8 @@ namespace DomainModel
 {
     public class Order
     {
+        protected Order() { }
+
         public Order(string code)
         {
             Code = code;

@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IOrdersRepository.cs" />
+    <Compile Include="DbInitializer.cs" />
     <Compile Include="Migrations\201602252044496_InitialCreate.cs" />
     <Compile Include="Migrations\201602252044496_InitialCreate.Designer.cs">
       <DependentUpon>201602252044496_InitialCreate.cs</DependentUpon>
@@ -58,7 +59,12 @@
     <Compile Include="Migrations\201602252049208_Initial.Designer.cs">
       <DependentUpon>201602252049208_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602272203064_Order identity added.cs" />
+    <Compile Include="Migrations\201602272203064_Order identity added.Designer.cs">
+      <DependentUpon>201602272203064_Order identity added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="OrderEntityConfiguration.cs" />
     <Compile Include="OrdersContext.cs" />
     <Compile Include="OrdersRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602252049208_Initial.resx">
       <DependentUpon>201602252049208_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602272203064_Order identity added.resx">
+      <DependentUpon>201602272203064_Order identity added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
