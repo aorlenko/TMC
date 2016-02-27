@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DatabaseContext.Contracts
+namespace DataAccess.Contracts
 {
     public interface IOrdersRepository
     {

@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DatabaseContext\DatabaseContext.csproj">
-      <Project>{21b780bf-dfa2-4eea-a945-388378cb2d90}</Project>
-      <Name>DatabaseContext</Name>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{b060e5cb-c29a-4fdc-b326-cb673e5860d0}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\DomainModel\DomainModel.csproj">
       <Project>{9c66274b-aeb0-473b-b1c3-56e8a125b15c}</Project>

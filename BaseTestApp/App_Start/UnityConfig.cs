@@ -1,10 +1,11 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
-using DatabaseContext.Contracts;
+using DataAccess.Contracts;
 using DatabaseContext;
 using Service.Contracts;
 using Service;
+using DataAccess;
 
 namespace BaseTestApp.App_Start
 {

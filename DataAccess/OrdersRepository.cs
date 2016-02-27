@@ -1,4 +1,5 @@
-﻿using DatabaseContext.Contracts;
+﻿using DataAccess.Contracts;
+using DatabaseContext;
 using DomainModel;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DatabaseContext
+namespace DataAccess
 {
     public class OrdersRepository:IOrdersRepository
     {
