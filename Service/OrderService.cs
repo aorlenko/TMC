@@ -17,9 +17,10 @@ namespace Service
         {
             _ordersRepo = ordersRepo;
         }
-        public IEnumerable<Order> GetAllOrders()
+        public virtual IEnumerable<Order> GetAllOrders()
         {
-            return _ordersRepo.GetAll();
+            var orders = _ordersRepo.GetAll();
+            return orders;
         }
     }
 }

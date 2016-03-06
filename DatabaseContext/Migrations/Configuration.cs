@@ -19,7 +19,7 @@ namespace DatabaseContext.Migrations
         {
             var defaultStandards = new List<Order>();
 
-            defaultStandards.Add(new Order("ABCDE"));
+            defaultStandards.Add(new Order("ABCDE", DateTime.Now));
 
             foreach (var order in defaultStandards)
                 context.Orders.AddOrUpdate(order);

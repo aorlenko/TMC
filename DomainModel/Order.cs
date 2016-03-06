@@ -10,13 +10,15 @@ namespace DomainModel
     {
         protected Order() { }
 
-        public Order(string code)
+        public Order(string code, DateTime date)
         {
             Code = code;
+            Date = date;
         }
 
         public int Id { get; private set; }
         public string Code { get; private set; }
+        public DateTime Date { get; private set; }
         public ICollection<OrderLine> OrderLines { get; set; }
     }
 }
