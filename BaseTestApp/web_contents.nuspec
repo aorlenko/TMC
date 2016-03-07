@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>BaseTestApp</id>
+    <version>1.0.0</version>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright 2013</copyright>
+	    <authors>Andrey</authors>
+		<description>Abcde</description>
+  </metadata>
+  <files>
+	<file src="Scripts\app\base.js" target="content\Scripts\app\" />
+  </files>
+</package>
